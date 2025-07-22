@@ -13,22 +13,29 @@ function App() {
 
   return (
     <>
-      {/* Crea una lista di bottoni, uno per linguaggio. */}
-      <div className="container mt-5">
-        <ul className='list-unstyled d-flex justify-content-around'>
-          {
-            progLanguages.map((progLanguage) => {
-              return (
-                <li key={progLanguage.id}>
-                  <button className="btn btn-primary">
-                    {progLanguage.name}
-                  </button>
-                </li>
-              )
-            })
-          }
-        </ul>
-      </div>
+      <header className='p-3'>
+        <h1>
+          Learn Web Development
+        </h1>
+      </header>
+      <main>
+        {/* Crea una lista di bottoni, uno per linguaggio. */}
+        <div className="container mt-5">
+          <ul className='list-unstyled d-flex justify-content-around'>
+            {
+              progLanguages.map((progLanguage) => {
+                return (
+                  <li key={progLanguage.id}>
+                    <button className="btn btn-primary">
+                      {progLanguage.name}
+                    </button>
+                  </li>
+                )
+              })
+            }
+          </ul>
+        </div>
+      </main>
     </>
   )
 }
