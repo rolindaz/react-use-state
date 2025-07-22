@@ -34,6 +34,17 @@ function App() {
               })
             }
           </ul>
+          {/* Inserisci sotto una card che mostri il titolo e la descrizione del primo linguaggio nell’array. */}
+          <div className="card mt-5">
+            <div className='card-body'>
+              <h4>
+                SQL
+              </h4>
+              <p>
+                Used for managing and querying data in relational databases, essential for data analysis and business intelligence.
+              </p>
+            </div>
+          </div>
         </div>
       </main>
     </>
