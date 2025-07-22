@@ -11,6 +11,9 @@ import progLanguages from './data/progLanguages'
 
 function App() {
 
+  const [languageName, setLanguageName] = useState(progLanguages[0].name)
+  const [languageDescription, setLanguageDescription] = useState(progLanguages[0].description)
+
   return (
     <>
       <header className='p-3'>
@@ -26,7 +29,7 @@ function App() {
               progLanguages.map((progLanguage) => {
                 return (
                   <li key={progLanguage.id}>
-                    <button className="btn btn-primary">
+                    <button className="btn btn-primary border-0" onClick={() => { setLanguageName(progLanguage.name); setLanguageDescription(progLanguage.description) }}>
                       {progLanguage.name}
                     </button>
                   </li>
@@ -38,10 +41,10 @@ function App() {
           <div className="card mt-5">
             <div className='card-body'>
               <h4>
-                SQL
+                {languageName}
               </h4>
               <p>
-                Used for managing and querying data in relational databases, essential for data analysis and business intelligence.
+                {languageDescription}
               </p>
             </div>
           </div>
@@ -52,3 +55,10 @@ function App() {
 }
 
 export default App
+
+
+/*
+Ragionamento per la dinamicità:
+
+Alla card vanno associate delle variabili di stato che siano collegate ad un on-click dei bottoni.
+*/

@@ -10,3 +10,9 @@ header {
     color: white;
     background-color: rgb(185, 196, 192);
 }
+
+main {
+    button:focus {
+        background-color: tan;
+    }
+}
